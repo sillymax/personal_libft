@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   charutils.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/21 04:48:59 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/21 06:04:34 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/21 06:44:25 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef CHARUTILS_H
+# define CHARUTILS_H
 
-// Includes standard and system-specific headers
-# include "sys_headers.h"
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isxdigit(int c);
+int	ft_isblank(int c);
+int	ft_isspace(int c);
+int	ft_iscntrl(int c);
+int	ft_isprint(int c);
+int	ft_isgraph(int c);
+int	ft_ispunct(int c);
+int	ft_isascii(int c);
 
 #endif
