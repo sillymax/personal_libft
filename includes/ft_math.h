@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert.h                                          :+:      :+:    :+:   */
+/*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 06:03:18 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/21 06:04:20 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/21 07:50:11 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/21 08:02:29 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_H
-# define CONVERT_H
+#ifndef FT_MATH_H
+# define FT_MATH_H
 
-int	ft_tolower(int c);
-int	ft_toupper(int c);
+double	ft_pow(double base, int exponent);
 
 #endif
