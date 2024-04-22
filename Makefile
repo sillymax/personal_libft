@@ -28,7 +28,7 @@ CC := cc
 CFLAGS := -Wall -Werror -Wextra $(if $(NOWARN), -w)
 
 # Include directories to search for header files
-IDIRS := -I$(INCLUDE_DIR)/
+IDIRS := $(addprefix -I, $(shell find $(INCLUDE_DIR)/ -type d))
 
 # Linker flags and libraries
 LDFLAGS :=

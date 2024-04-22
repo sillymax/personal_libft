@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 17:34:28 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 18:46:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/02/18 21:41:34 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:20:53 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t originalsize, size_t newsize)
+// Copies at most 'n' characters from 'src' to 'dest',
+// ensuring 'dest' is null-terminated up to 'n' characters.
+// Does not terminate 'dest' if 'src' is shorter than 'n'.
+char	*ft_strncpy(char *dest, const char *src, int n)
 {
-	void	*result;
-	size_t	copysize;
+	char	*start;
 
-	if (!ptr)
-		return (malloc(newsize));
-	if (newsize == 0)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	result = malloc(newsize);
-	if (!result)
-		return (NULL);
-	copysize = ft_min(originalsize, newsize);
-	ft_memcpy(result, ptr, copysize);
-	free(ptr);
-	return (result);
+	if (!dest || !src || n < 0)
+		return (dest);
+	start = dest;
+	while (*src && n--)
+		*dest++ = *src++;
+	while (n-- > 0)
+		*dest++ = '\0';
+	return (start);
 }

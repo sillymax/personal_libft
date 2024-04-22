@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 19:09:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/02/17 17:33:57 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:23:24 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// System headers
-# include "system.h"
+int	ft_strspn(const char *str, const char *accept)
+{
+	int	spanlen;
 
-// Libft headers
-# include "ft_check.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_string.h"
-# include "ft_convert.h"
-# include "ft_output.h"
-
-#endif
+	if (!str || !accept)
+		return (0);
+	spanlen = 0;
+	while (str[spanlen] && ft_strchr(accept, str[spanlen]))
+		spanlen++;
+	return (spanlen);
+}

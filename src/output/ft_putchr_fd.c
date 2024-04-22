@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memory.h                                        :+:      :+:    :+:   */
+/*   ft_putchr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 17:27:46 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 17:38:52 by ychng            ###   ########.fr       */
+/*   Created: 2024/03/17 03:38:48 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:38:02 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MEMORY_H
-# define FT_MEMORY_H
+#include "libft.h"
 
-void	ft_bzero(void *str, size_t size);
-void	*ft_memcpy(void *dest, const void *src, size_t size);
-void	*ft_memset(void *dest, int c, size_t size);
-void	*ft_realloc(void *ptr, size_t original_size, size_t new_size);
-
-#endif
+void	ft_putchr_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

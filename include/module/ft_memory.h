@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.h                                         :+:      :+:    :+:   */
+/*   ft_memory.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 06:04:34 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/21 08:03:07 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/22 17:27:46 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:58:28 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CTYPE_H
-# define FT_CTYPE_H
+#ifndef FT_MEMORY_H
+# define FT_MEMORY_H
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isxdigit(int c);
-int	ft_isblank(int c);
-int	ft_isspace(int c);
-int	ft_iscntrl(int c);
-int	ft_isprint(int c);
-int	ft_isgraph(int c);
-int	ft_ispunct(int c);
-int	ft_isascii(int c);
+// Memory Functions
+void	ft_bzero(void *str, size_t size);
+void	*ft_memset(void *dest, int c, size_t size);
+void	*ft_memcpy(void *dest, const void *src, size_t size);
+void	*ft_realloc(void *ptr, size_t originalsize, size_t newsize);
 
 #endif

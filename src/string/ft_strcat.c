@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_math.h                                          :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 07:50:11 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/21 08:02:29 by ychng            ###   ########.fr       */
+/*   Created: 2024/02/16 19:41:15 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 17:50:15 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MATH_H
-# define FT_MATH_H
+#include "libft.h"
 
-double	ft_pow(double base, int exponent);
+char	*ft_strcat(char *dest, const char *src)
+{
+	int	i;
+	int	j;
 
-#endif
+	if (!dest || !src)
+		return (dest);
+	i = 0;
+	while (dest[i])
+		i++;
+	j = 0;
+	while (src[j])
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
+}

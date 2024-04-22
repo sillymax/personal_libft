@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_convert.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 19:09:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/21 06:03:18 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:46:59 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_CONVERT_H
+# define FT_CONVERT_H
 
-// System headers
-# include "system.h"
-
-// Libft headers
-# include "ft_check.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_string.h"
-# include "ft_convert.h"
-# include "ft_output.h"
+// Conversion Functions
+int			ft_tolower(int c);
+int			ft_toupper(int c);
+int			ft_atoi(const char *nptr);
+long long	ft_atoll(const char *nptr);
+double		ft_atof(const char *nptr);
+char		*ft_itoa(int num);
+char		*ft_lltoa(long long num);
 
 #endif

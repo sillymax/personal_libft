@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_check.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 19:09:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/21 06:04:34 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:55:13 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_CHECK_H
+# define FT_CHECK_H
 
-// System headers
-# include "system.h"
-
-// Libft headers
-# include "ft_check.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_string.h"
-# include "ft_convert.h"
-# include "ft_output.h"
+// Character Check Functions
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isxdigit(int c);
+int	ft_isblank(int c);
+int	ft_isspace(int c);
+int	ft_iscntrl(int c);
+int	ft_isprint(int c);
+int	ft_isgraph(int c);
+int	ft_ispunct(int c);
+int	ft_isascii(int c);
 
 #endif

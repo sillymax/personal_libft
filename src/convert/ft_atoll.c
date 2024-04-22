@@ -6,7 +6,7 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:52:27 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 16:56:50 by ychng            ###   ########.fr       */
+/*   Updated: 2024/04/22 19:17:46 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ long long	ft_atoll(const char *nptr)
 
 	if (!nptr)
 		return (0);
-	while (is_blank(*nptr))
+	while (ft_isblank(*nptr))
 		nptr++;
 	if (*nptr == '\0')
 		return (0);

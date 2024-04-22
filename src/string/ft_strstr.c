@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 17:34:28 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 18:46:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/02/21 06:32:35 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:23:58 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t originalsize, size_t newsize)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	void	*result;
-	size_t	copysize;
+	int	haystacklen;
+	int	needlelen;
 
-	if (!ptr)
-		return (malloc(newsize));
-	if (newsize == 0)
+	if (!haystack || !needle)
+		return (NULL);
+	if (*needle == '\0')
+		return ((char *)haystack);
+	haystacklen = ft_strlen(haystack);
+	needlelen = ft_strlen(needle);
+	while (*haystack && (haystacklen >= needlelen))
 	{
-		free(ptr);
-		return (NULL);
+		if (ft_strncmp(haystack, needle, needlelen) == 0)
+			return ((char *)haystack);
+		haystack++;
+		haystacklen--;
 	}
-	result = malloc(newsize);
-	if (!result)
-		return (NULL);
-	copysize = ft_min(originalsize, newsize);
-	ft_memcpy(result, ptr, copysize);
-	free(ptr);
-	return (result);
+	return (NULL);
 }

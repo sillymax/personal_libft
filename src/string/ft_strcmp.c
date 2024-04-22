@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 19:09:32 by ychng            ###   ########.fr       */
+/*   Created: 2023/11/08 06:51:24 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 17:51:26 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// System headers
-# include "system.h"
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	int	i;
 
-// Libft headers
-# include "ft_check.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_string.h"
-# include "ft_convert.h"
-# include "ft_output.h"
-
-#endif
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (s1[i] - s2[i]);
+}

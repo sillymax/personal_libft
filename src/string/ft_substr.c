@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 17:34:28 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 18:46:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/02/13 20:31:37 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:34:48 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t originalsize, size_t newsize)
+char	*ft_substr(const char *str, int start, int len)
 {
-	void	*result;
-	size_t	copysize;
+	int		strlen;
+	int		substrlen;
+	char	*result;
 
-	if (!ptr)
-		return (malloc(newsize));
-	if (newsize == 0)
-	{
-		free(ptr);
+	if (!str || start < 0 || len < 0)
 		return (NULL);
-	}
-	result = malloc(newsize);
+	strlen = ft_strlen(str);
+	if (start >= strlen)
+		return (NULL);
+	substrlen = ft_min(strlen - start, len);
+	result = malloc(sizeof(char) * (substrlen + 1));
 	if (!result)
 		return (NULL);
-	copysize = ft_min(originalsize, newsize);
-	ft_memcpy(result, ptr, copysize);
-	free(ptr);
+	ft_strncpy(result, str + start, substrlen);
+	result[substrlen] = '\0';
 	return (result);
 }

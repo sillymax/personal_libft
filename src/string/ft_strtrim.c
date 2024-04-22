@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 19:09:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/02/26 12:04:53 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 18:24:52 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// System headers
-# include "system.h"
+char	*ft_strtrim(const char *str, const char *delim)
+{
+	char	*start;
+	int		len;
 
-// Libft headers
-# include "ft_check.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_string.h"
-# include "ft_convert.h"
-# include "ft_output.h"
-
-#endif
+	if (!str || !delim)
+		return (NULL);
+	start = (char *)str + ft_strspn(str, delim);
+	len = ft_strlen(start) - ft_rstrspn(start, delim);
+	return (ft_substr(start, 0, len));
+}
