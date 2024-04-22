@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 17:28:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/22 17:29:49 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 17:31:39 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// Includes standard and system-specific headers
-# include "sys_headers.h"
-# include "ft_ctype.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_convert.h"
+void	*ft_memcpy(void *dest, const void *src, size_t size)
+{
+	char	*destination;
+	char	*source;
 
-#endif
+	if (!dest || !src)
+		return (dest);
+	destination = (char *)dest;
+	source = (char *)src;
+	while (size--)
+		*destination++ = *source++;
+	return (dest);
+}

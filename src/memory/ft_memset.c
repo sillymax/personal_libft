@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 17:28:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/22 17:32:39 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 17:33:11 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// Includes standard and system-specific headers
-# include "sys_headers.h"
-# include "ft_ctype.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_convert.h"
+void	*ft_memset(void *dest, int c, size_t size)
+{
+	unsigned char	*destination;
 
-#endif
+	if (!dest)
+		return (NULL);
+	destination = (unsigned char *)dest;
+	while (size--)
+		*destination++ = (unsigned char)c;
+	return (dest);
+}

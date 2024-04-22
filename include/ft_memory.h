@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memory.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 17:28:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/22 17:27:46 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 17:38:52 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_MEMORY_H
+# define FT_MEMORY_H
 
-// Includes standard and system-specific headers
-# include "sys_headers.h"
-# include "ft_ctype.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_convert.h"
+void	ft_bzero(void *str, size_t size);
+void	*ft_memcpy(void *dest, const void *src, size_t size);
+void	*ft_memset(void *dest, int c, size_t size);
+void	*ft_realloc(void *ptr, size_t original_size, size_t new_size);
 
 #endif

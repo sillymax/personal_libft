@@ -6,13 +6,13 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:58:29 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 17:24:19 by ychng            ###   ########.fr       */
+/*   Updated: 2024/04/22 17:36:22 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	getlen(long long num)
+static int	get_len(long long num)
 {
 	int	len;
 
@@ -31,7 +31,7 @@ static int	getlen(long long num)
 
 }
 
-static char	*generatestr(long long num, int len)
+static char	*generate_str(long long num, int len)
 {
 	char	*str;
 	bool	isnegative;
@@ -61,7 +61,7 @@ char	*ft_lltoa(long long num)
 	int		len;
 	char	*result;
 
-	len = getlen(num);
-	result = generatestr(num, len);
+	len = get_len(num);
+	result = generate_str(num, len);
 	return (result);
 }

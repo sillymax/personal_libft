@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 04:33:26 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 17:28:32 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/22 17:46:19 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/22 17:47:29 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_STRING_H
+# define FT_STRING_H
 
-// Includes standard and system-specific headers
-# include "sys_headers.h"
-# include "ft_ctype.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_convert.h"
+char	*ft_rstrchr(const char *str, int c);
+int		ft_rstrcspn(const char *str, const char *reject);
+int		ft_rstrspn(const char *str, const char *accept);
+char	**ft_split(const char *str, const char *delim);
 
 #endif
