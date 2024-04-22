@@ -6,14 +6,14 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:46:19 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 18:58:16 by ychng            ###   ########.fr       */
+/*   Updated: 2024/04/22 19:27:23 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
-// String Functions
+// String functions
 int		ft_strlen(const char *str);
 int		ft_strspn(const char *str, const char *accept);
 int		ft_rstrspn(const char *str, const char *accept);

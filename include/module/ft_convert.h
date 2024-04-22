@@ -6,14 +6,14 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 06:03:18 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 18:46:59 by ychng            ###   ########.fr       */
+/*   Updated: 2024/04/22 19:27:03 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_CONVERT_H
 # define FT_CONVERT_H
 
-// Conversion Functions
+// Conversion functions
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_atoi(const char *nptr);
