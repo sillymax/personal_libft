@@ -6,7 +6,7 @@
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:46:19 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 20:17:30 by ychng            ###   ########.fr       */
+/*   Updated: 2024/04/23 19:37:00 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, int n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_rstrchr(const char *str, int c);
+char	*ft_strpbrk(const char *str, const char *accept);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strcpy(char *dest, const char *src);

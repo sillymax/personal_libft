@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memory.h                                        :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 17:27:46 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/23 19:30:17 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/23 19:31:20 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/23 19:34:20 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MEMORY_H
-# define FT_MEMORY_H
+#include "libft.h"
 
-// Memory functions
-void	ft_bzero(void *str, size_t size);
-void	*ft_memset(void *dest, int c, size_t size);
-void	*ft_memcpy(void *dest, const void *src, size_t size);
-void	*ft_calloc(size_t n, size_t size);
-void	*ft_realloc(void *ptr, size_t originalsize, size_t newsize);
-
-#endif
+char	*ft_strpbrk(const char *str, const char *accept)
+{
+	if (!str || !accept)
+		return (NULL);
+	while (*str)
+	{
+		if (ft_strchr(accept, *str) != NULL)
+			return ((char *)str);
+		str++;
+	}
+	return (NULL);
+}

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memory.h                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 17:27:46 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/23 19:30:17 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/23 19:23:19 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/23 19:30:48 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MEMORY_H
-# define FT_MEMORY_H
+#include "libft.h"
 
-// Memory functions
-void	ft_bzero(void *str, size_t size);
-void	*ft_memset(void *dest, int c, size_t size);
-void	*ft_memcpy(void *dest, const void *src, size_t size);
-void	*ft_calloc(size_t n, size_t size);
-void	*ft_realloc(void *ptr, size_t originalsize, size_t newsize);
+void	*ft_calloc(size_t n, size_t size)
+{
+	size_t	totalsize;
+	void	*ptr;
 
-#endif
+	totalsize = n * size;
+	ptr = malloc(totalsize);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, totalsize);
+	return (ptr);
+}
