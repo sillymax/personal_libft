@@ -17,7 +17,7 @@ EXCLUDE_FILES := $(addprefix $(SRC_DIR)/, $(addsuffix /*, $(EXCLUDE_DIRS))) \
 				 $(addprefix $(SRC_DIR)/, $(EXCLUDE_SRCS))
 
 # Source files
-SRC_FILES := $(wildcard $(SRC_DIR)/**/*.c)
+SRC_FILES := $(shell find $(SRC_DIR)/ -type f -name "*.c")
 SRCS := $(filter-out $(EXCLUDE_FILES), $(SRC_FILES))
 
 # Object files

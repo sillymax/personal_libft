@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_output.h                                        :+:      :+:    :+:   */
+/*   handlers_1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychng <ychng@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 18:40:57 by ychng             #+#    #+#             */
-/*   Updated: 2024/04/22 19:27:18 by ychng            ###   ########.fr       */
+/*   Created: 2024/04/23 20:14:17 by ychng             #+#    #+#             */
+/*   Updated: 2024/04/23 20:17:15 by ychng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_OUTPUT_H
-# define FT_OUTPUT_H
+#include "libft.h"
 
-// Output functions
-void	ft_putchr_fd(char c, int fd);
-void	ft_putstr_fd(char *str, int fd);
+void	handlechar(t_resultinfo *info, char c)
+{
+	write_tobuffer(info, c);
+}
 
-#endif
+void	handlestring(t_resultinfo *info, char *str)
+{
+	if (!str)
+		str = "(null)";
+	while (*str)
+	{
+		write_tobuffer(info, *str);
+		str++;
+	}
+}
+
+void	handlepercent(t_resultinfo *info)
+{
+	write_tobuffer(info, '%');
+}
