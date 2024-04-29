@@ -44,7 +44,7 @@ $(NAME): $(OBJS)
 # Pattern rule to compile source files
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(IDIRS) -c $< -o $@
+	$(CC) $(CFLAGS) $(IDIRS) $(LDFLAGS) -c $< $(LDLIBS) -o $@
 
 # Remove object directory
 clean:
