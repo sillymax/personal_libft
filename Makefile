@@ -25,7 +25,7 @@ OBJS := $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Compiler settings
 CC := cc
-CFLAGS := -Wall -Werror -Wextra $(if $(NOWARN), -w)
+CFLAGS := -MMD -MP -Wall -Werror -Wextra $(if $(NOWARN), -w)
 
 # Include directories to search for header files
 IDIRS := $(addprefix -I, $(shell find $(INCLUDE_DIR)/ -type d))
@@ -59,3 +59,6 @@ re: fclean all
 
 # Phony targets
 .PHONY: all clean fclean re
+
+# Include dependency files
+-include $(OBJS:.o=.d)
